@@ -2,7 +2,7 @@
 body {
     display: flexbox;
     justify-items: center;
-    background-image: url(_media/logo.jpeg);
+    background-image: url(logo.jpeg);
     background-size: cover;
     image-rendering:optimizeQuality;
     image-resolution: 100%;
