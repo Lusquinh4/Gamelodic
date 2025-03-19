@@ -1,0 +1,45 @@
+@media screen and (min-width: 768px){
+body {
+    display: flexbox;
+    justify-items: center;
+    background-image: url(_media/logo.jpeg);
+    background-size: cover;
+    image-rendering:optimizeQuality;
+    image-resolution: 100%;
+}
+
+#interface {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(25px);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        height: 80vh;
+        width: 80%;
+        display: flexbox;
+        justify-items: center;
+}
+
+header {
+    padding-top: 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+legend{
+    display: flexbox;
+    justify-self: center;
+}
+
+.instrumento {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 80px;
+    border: solid 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+}
