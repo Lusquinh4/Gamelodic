@@ -4,6 +4,7 @@ body {
     justify-content: center;
     background-image: url(logo.jpeg);
     background-size: cover;
+    object-fit: cover;
     image-rendering:optimizeQuality;
     image-resolution: 100%;
 }
@@ -26,6 +27,7 @@ header {
 ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -36,7 +38,6 @@ legend{
 
 .instrumento {
     display: flex;
-    flex-wrap: wrap;
     width: 100px;
     height: 80px;
     border: solid 2px rgba(0, 0, 0, 0.1);
