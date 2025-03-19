@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px) and (max-width: 768px){
+@media screen and (min-width: 600px) and (max-width: 768px) {
 body {
     display: flex;
     justify-content: center;
@@ -15,12 +15,12 @@ body {
         border-radius: 10px;
         height: 80vh;
         width: 80%;
-        display: flexbox;
-        justify-content: center;
 }
 
 header {
     padding-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 ul {
