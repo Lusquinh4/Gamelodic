@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     background-image: url(logo.jpeg);
-    background-size: cover;
+    background-position: center;
     object-fit: cover;
     image-rendering:optimizeQuality;
     image-resolution: 100%;
@@ -14,7 +14,7 @@ body {
         -webkit-backdrop-filter: blur(25px);
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
-        height: 80vh;
+        height: fit-content;
         width: 80%;
 }
 
@@ -43,4 +43,52 @@ legend{
     border: solid 2px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
+}
+@media screen and (min-width: 769px){
+    body {
+        display: flex;
+        justify-content: center;
+        background-image: url(logo2.jpg);
+        background-size: cover;
+        background-position: center;
+        image-rendering:optimizeQuality;
+        image-resolution: 100%;
+    }
+    
+    #interface {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(25px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: fit-content;
+            width: 70%;
+            margin: 10px auto;
+    }
+    
+    header {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 20pt;
+        padding: 0;
+        margin: 0;
+    }
+    
+    #opcoes {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        gap: 20px;
+    }
+    
+    .instrumento {
+        list-style: none;
+        width: 200px;
+        height: 200px;
+        border: solid 2px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    } 
 }

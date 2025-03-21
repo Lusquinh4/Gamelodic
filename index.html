@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo-gamelodic.png" >
     <title>Gamelodic</title>
 </head>
 
@@ -15,19 +16,39 @@
     <header>
         <h1>Gamelodic</h1>
     </header>
-    
+
     <main>
-        <legend><h2>Instrumentos</h2></legend>
         <ul>
-            <li class="instrumento"><h3>Guitarra</h3></li>
+            <div id="opcoes">
+            <li class="instrumento" onmouseover="trocaFundo()"><h3>Guitarra</h3></li>
             <li class="instrumento"><h3>Violão</h3></li>
             <li class="instrumento"><h3>Violino</h3></li>
             <li class="instrumento"><h3>Teclado</h3></li>
             <li class="instrumento"><h3>Trompete</h3></li>
+        </div>
         </ul>
     </main>
 
     </div>
+
+    <script>
+        function trocaFundo() {
+            const instrumentos = document.querySelectorAll(".instrumento");
+            
+            instrumentos.forEach(instrumento => {
+                instrumento.addEventListener("mouseover", function() {
+                    const estiloAtual = getComputedStyle(instrumento).backgroundImage;
+                    
+                    // Verifica se não tem imagem de fundo ou é "none"
+                    if (estiloAtual === "none" || estiloAtual === "") {
+                        instrumento.style.backgroundImage = "url(logo2.jpg)";
+                    } else {
+                        instrumento.style.backgroundImage = "none";
+                    }
+                });
+            });
+        }
+    </script>
 
 </body>
 
