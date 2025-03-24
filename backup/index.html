@@ -17,7 +17,7 @@
         <main>
             <ul>
                 <legend>
-                    <h1 id="titulo">Gamelodic</h1> <img id="logo" src="logo-gamelodic.png" alt="">
+                    <h1 id="titulo">Gamelodic</h1> <img id="logo" src="logo-gamelodic.png" alt="" onclick="modoNoturno()">
                 </legend>
          <div id="opcoes">
             <li class="instrumento"><h3>Guitarra</h3></li>
@@ -33,6 +33,17 @@
     </main>
 
     </div>
+
+    <script>
+        function modoNoturno() {
+            const noturno = document.body.style.background;
+            if (noturno === "linear-gradient(45deg, #739ff1, #8369fb) no-repeat" ) {
+                document.body.style.background = "linear-gradient(45deg, #0b2c6b, #352a66) no-repeat";
+            } else {
+                document.body.style.background = "linear-gradient(45deg, #739ff1, #8369fb) no-repeat";
+            }
+        }
+    </script>
 
 </body>
 
