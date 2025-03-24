@@ -20,7 +20,7 @@
                 <h1 id="titulo">Gamelodic</h1>
             </legend>
             <div id="opcoes">
-            <li class="instrumento" onmouseover="trocaFundo()"><h3>Guitarra</h3></li>
+            <li class="instrumento"><h3>Guitarra</h3></li>
             <li class="instrumento"><h3>Violão</h3></li>
             <li class="instrumento"><h3>Violino</h3></li>
             <li class="instrumento"><h3>Teclado</h3></li>
@@ -30,25 +30,6 @@
     </main>
 
     </div>
-
-    <script>
-        function trocaFundo() {
-            const instrumentos = document.querySelectorAll(".instrumento");
-            
-            instrumentos.forEach(instrumento => {
-                instrumento.addEventListener("mouseover", function() {
-                    const estiloAtual = getComputedStyle(instrumento).backgroundImage;
-                    
-                    // Verifica se não tem imagem de fundo ou é "none"
-                    if (estiloAtual === "none" || estiloAtual === "") {
-                        instrumento.style.backgroundImage = "url(logo-gamelodic.png)";
-                    } else {
-                        instrumento.style.backgroundImage = "none";
-                    }
-                });
-            });
-        }
-    </script>
 
 </body>
 
