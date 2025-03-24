@@ -60,6 +60,7 @@ legend{
     width: 110px;
 }
 
+}
 @media screen and (min-width: 481px) and (max-width: 1024px){
     body {
         display: flex;
@@ -113,8 +114,3 @@ legend{
         border-radius: 10px;
     } 
 }
-/*@media screen and (min-width: 1024px){
-    body {
-        background-color: black;
-    }
-}*/
