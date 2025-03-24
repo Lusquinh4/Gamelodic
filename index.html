@@ -13,12 +13,12 @@
 
     <div id="interface">
 
-    <header>
-        <h1>Gamelodic</h1>
-    </header>
-
-    <main>
+        
+        <main>
         <ul>
+            <legend>
+                <h1 id="titulo">Gamelodic</h1>
+            </legend>
             <div id="opcoes">
             <li class="instrumento" onmouseover="trocaFundo()"><h3>Guitarra</h3></li>
             <li class="instrumento"><h3>Violão</h3></li>
@@ -41,7 +41,7 @@
                     
                     // Verifica se não tem imagem de fundo ou é "none"
                     if (estiloAtual === "none" || estiloAtual === "") {
-                        instrumento.style.backgroundImage = "url(logo2.jpg)";
+                        instrumento.style.backgroundImage = "url(logo-gamelodic.png)";
                     } else {
                         instrumento.style.backgroundImage = "none";
                     }

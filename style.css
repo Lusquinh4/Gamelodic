@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px){
 body {
     display: flex;
     justify-content: center;
@@ -16,19 +16,22 @@ body {
         border-radius: 10px;
         height: fit-content;
         width: 80%;
+        display: flex;
+        justify-items: center;
 }
 
-header {
+#titulo {
     padding-top: 20px;
     display: flex;
     justify-content: center;
 }
 
-ul {
+#opcoes{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
 }
 
 legend{
@@ -42,23 +45,29 @@ legend{
     height: 80px;
     border: solid 2px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    flex: 1 1 100px;
 }
 }
-@media screen and (min-width: 769px){
+@media screen and (min-width: 481px) and (max-width: 1024px){
     body {
         display: flex;
         justify-content: center;
-        background-image: url(logo2.jpg);
+        /*background-image: url(logo2.jpg);
         background-size: cover;
         background-position: center;
         image-rendering:optimizeQuality;
-        image-resolution: 100%;
+        image-resolution: 100%;*/
+        background-color: black;
     }
     
     #interface {
-            backdrop-filter: blur(10px);
+            /*backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(25px);
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);*/
+            background-image: url(logo2.jpg);
+            object-fit: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             border-radius: 10px;
             height: fit-content;
             width: 70%;
@@ -92,3 +101,8 @@ legend{
         border-radius: 10px;
     } 
 }
+/*@media screen and (min-width: 1024px){
+    body {
+        background-color: black;
+    }
+}*/
