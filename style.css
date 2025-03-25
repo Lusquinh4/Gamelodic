@@ -27,6 +27,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 #interface {
@@ -36,10 +37,9 @@ body {
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
         border-radius: 10px;
         height: fit-content;
-        width: 80%;
+        width: fit-content;
         display: flex;
         justify-items: center;
-        margin-top: 10%;
 }
 
 legend{
@@ -142,10 +142,8 @@ body {
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
         border-radius: 10px;
         height: fit-content;
-        width: 80%;
         display: flex;
         justify-items: center;
-        margin-top: 10%;
 }
 
 legend{
@@ -230,11 +228,38 @@ img {
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    #interface{
-        margin-top: 15%;
-    }
-
     .instrumento{
         flex: 1 1 150px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    #interface {
+        justify-content: center;
+        margin-top: 0;
+    }
+    .instrumento {
+        flex: 1 1 150px;
+    }
+    #titulo {
+        font-size: 40pt;
+    }
+    body {
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    #interface {
+        justify-content: center;
+    }
+    .instrumento {
+        flex: 1 1 150px;
+    }
+    #titulo {
+        font-size: 40pt;
+    }
+    body {
+        align-items: center;
     }
 }
