@@ -22,6 +22,7 @@ body {
     justify-content: center;
     background-image: url(fundo2.jpg);
     background-position: center;
+    background-repeat: no-repeat;
     object-fit: cover;
     width: 100%;
     height: 100vh;
