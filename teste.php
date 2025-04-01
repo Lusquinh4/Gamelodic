@@ -40,7 +40,7 @@
         } elseif ($imc >= 25 && $imc < 29.9) {
             $estado = "você está <b>acima do peso</b>";
         } else {
-            $estado = "você está <b>mais do que um obeso comum</b>";
+            $estado = "você está <b>mais obeso do que a tais carla</b>";
         }
 
         
@@ -49,9 +49,10 @@
         echo "De acordo com sua idade de $idade anos, e altura de $altura m: <br> Seu imc é $imc, o que significa que $estado";
     }
     echo "<br>";
-    if ($estado === "você está <b>obeso</b>") {
+    if ($imc > 29.9) {
         $img = "obeso.jpeg";
-        echo "<img id='foto' src='$img' width='300px' height='300px'>";
+        echo "<br>";
+        echo "<img id='foto' src='$img' width='400px' height='300px'>";
     }
     ?>
     <script>
