@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* Cria  a animação */
+        @keyframes entrada-direita {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateX(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Insere a animação no Tailwind */
+        .animate-entrada-direita {
+            animation: entrada-direita 1s ease-in-out;
+        }
+
+        @keyframes entrada-fade-in {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .animate-entrada-fade-in {
+            animation: entrada-fade-in 1s ease-in-out;
+        }
+
+    </style>
+
+</head>
+<body class="bg-linear-65 from-blue-500 to-violet-500">
+
+<!--Titulo e navegação-->
+    <div class="bg-linear-65 from-blue-500 to-violet-500 w-full h-[60px] flex items-center justify-center"> 
+        <div id="linha-topo" class="w-1/2 h-full flex items-center justify-center gap-2 sticky top-0">
+            <h1 id="titulo" class="text-white text-5xl">Gamelodic</h1>
+            <button id="toggleButton" type="button" class="size-6 bg-[url(logo-gamelodic.png)] bg-cover active:bg-blue-300 hover:shadow-lg hover:shadow-yellow-500/70"></button>
+
+            <nav class="hidden" id="nav">
+                <ul class="text-white flex flex-row gap-2" >
+                    <li>Home</li>
+                    <li>Quem somos</li>
+                    <li>Projetos</li>
+                    <li>Instrumentos/Materiais</li>
+                    <li>Fale conosco</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Conteúdo -->
+    <div class="flex flex-col items-center justify-center mt-5 bg-white w-screen h-[500px]">
+        <main class="w-1/2 flex items-center text-center">
+            <article>
+                <h2 class="text-3xl mb-10 animate-entrada-direita">Quem somos</h2>
+                <p class="animate-entrada-direita">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br>
+                    Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
+                </p>
+            </article>
+        </main>
+    </div>
+
+<!-- Função do topo -->
+    <script>
+
+        const toggleButton = document.getElementById('toggleButton');
+        toggleButton.addEventListener('click', toggleMenu);
+        
+        function toggleMenu() {
+            const menu = document.getElementById('nav')
+            const linhaTopo = document.getElementById('linha-topo')
+            const titulo = document.getElementById('titulo')
+
+                if (menu.classList.contains('hidden')){
+                    menu.classList.remove('hidden')
+                    linhaTopo.classList.remove('justify-center')
+                    linhaTopo.classList.add('justify-between')
+                    titulo.classList.add('hidden')
+                } else  {
+                    menu.classList.add('hidden')
+                    linhaTopo.classList.add('justify-center')
+                    linhaTopo.classList.remove('justify-between')
+                    titulo.classList.remove('hidden')
+                }
+                
+            }
+    </script>
+
+</body>
+</html>
+<!-- 
+    Apresentação / Nosso objetivo
+
+    Quem somos 
+
+    Projetos
+
+    Instrumentos / PDFs Materiais
+
+    Ofertas / Inscrições (Compra do Workshop) / Calendário
+
+    Fale Conosco
+
+
+ <script>
+        function toggleMenu() {
+            const menu = document.querySelector('nav')
+            const linhaTopo = document.getElementById('linha-topo')
+            if (menu.style.display == 'none') {
+                menu.style.display = 'flex'
+                linhaTopo.style.justifyContent = 'center'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+    </script>
+
+<div id="linha-topo" class="w-1/2 h-full flex border-2 border-white justify-between items-center">
+            <header class="text-white flex flex-row gap-2">
+                <h1 class="text-md">Gamelodic  </h1>
+                <button onclick="toggleMenu()"><figure><img src="fundo2.jpg" alt="" class="size-6"></figure></button>
+            </header>
+
+            <nav>
+                <ul class="text-white flex flex-row gap-2">
+                    <li>Home</li>
+                    <li>Quem somos</li>
+                    <li>Projetos</li>
+                    <li>Instrumentos/Materiais</li>
+                    <li>Fale conosco</li>
+                </ul>
+            </nav>
+        </div>
+
+    -->
