@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
 
     <style>
         /* Cria  a animação */
+
         @keyframes entrada-direita {
             0% {
                 opacity: 0;
@@ -26,7 +27,7 @@
 
         /* Insere a animação no Tailwind */
         .animate-entrada-direita {
-            animation: entrada-direita 1s ease-in-out;
+            animation: entrada-direita 1.5s ease-in-out;
         }
 
         @keyframes entrada-fade-in {
@@ -51,18 +52,18 @@
 <body class="bg-linear-65 from-blue-500 to-violet-500">
 
 <!--Titulo e navegação-->
-    <div class="bg-linear-65 from-blue-500 to-violet-500 w-full h-[60px] flex items-center justify-center"> 
+    <div class="bg-linear-65 from-blue-500 to-violet-500 w-full h-[60px] flex items-center justify-center sticky top-0"> 
         <div id="linha-topo" class="w-1/2 h-full flex items-center justify-center gap-2 sticky top-0">
             <h1 id="titulo" class="text-white text-5xl">Gamelodic</h1>
-            <button id="toggleButton" type="button" class="size-6 bg-[url(logo-gamelodic.png)] bg-cover active:bg-blue-300 hover:shadow-lg hover:shadow-yellow-500/70"></button>
+            <button id="toggleButton" type="button" class="size-6 bg-[url(logo-gamelodic.png)] bg-cover active:bg-blue-300 hover:shadow-lg hover:shadow-yellow-500/70 border border-white"></button>
 
             <nav class="hidden" id="nav">
                 <ul class="text-white flex flex-row gap-2" >
-                    <li>Home</li>
-                    <li>Quem somos</li>
-                    <li>Projetos</li>
-                    <li>Instrumentos/Materiais</li>
-                    <li>Fale conosco</li>
+                    <li class="bg-white/20 rounded-lg p-1 hover:bg-black/20"><a href="#home">Home</a></li>
+                    <li class="bg-white/20 rounded-lg p-1 hover:bg-black/20"><a href="#home">Quem somos</a></li>
+                    <li class="bg-white/20 rounded-lg p-1 hover:bg-black/20"><a href="#projetos">Projetos</a></li>
+                    <li class="bg-white/20 rounded-lg p-1 hover:bg-black/20"><a href="#instrumentos">Instrumentos/Materiais</a></li>
+                    <li class="bg-white/20 rounded-lg p-1 hover:bg-black/20"><a href="#fale-conosco">Fale conosco</a></li>
                 </ul>
             </nav>
         </div>
@@ -70,11 +71,25 @@
 
 
     <!-- Conteúdo -->
-    <div class="flex flex-col items-center justify-center mt-5 bg-white w-screen h-[500px]">
-        <main class="w-1/2 flex items-center text-center">
+
+    <!--Apresentação-->
+    <div id="home" class="flex flex-col items-center justify-center mt-5 bg-white w-screen h-[600px]">
+        <main id="home-anim" class="w-1/2 flex items-center text-center justify-center">
             <article>
-                <h2 class="text-3xl mb-10 animate-entrada-direita">Quem somos</h2>
-                <p class="animate-entrada-direita">
+                <h2 class="text-3xl mb-10">Apresentação</h2>
+                <p class="indent-5 text-justify">
+                    Bem-vindo ao Gamelodic! Somos um grupo de músicos apaixonados por trilhas sonoras de jogos, combinando talento e criatividade para dar vida aos mundos digitais através da música. Nosso projeto não se limita apenas à criação musical — também produzimos conteúdos ricos e envolventes para a internet. Além disso, preparamos videoaulas, workshops presenciais e lives que conectam aprendizado e interação, compartilhando nosso amor pela música e pelos jogos. Nossa missão é transformar experiências sonoras em momentos inesquecíveis para jogadores e aprendizes!
+                </p>
+            </article>
+        </main>
+    </div>
+
+    <!--Projetos-->
+    <div id="projetos" class="flex flex-col items-center justify-center mt-5 bg-white w-screen h-screen">
+        <main id="projetos-anim" class="w-1/2 flex items-center text-center">
+            <article>
+                <h2 class="text-3xl mb-10">Projetos</h2>
+                <p class="indent-5 text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br>
                     Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
                 </p>
@@ -82,38 +97,46 @@
         </main>
     </div>
 
-<!-- Função do topo -->
-    <script>
 
-        const toggleButton = document.getElementById('toggleButton');
-        toggleButton.addEventListener('click', toggleMenu);
-        
-        function toggleMenu() {
-            const menu = document.getElementById('nav')
-            const linhaTopo = document.getElementById('linha-topo')
-            const titulo = document.getElementById('titulo')
+    <!--Instrumentos / Materiais-->
+    <div id="instrumentos" class="flex flex-col items-center justify-center mt-5 bg-white w-screen h-screen">
+        <main class="w-1/2 flex items-center text-center">
+            <article>
+                <h2 class="text-3xl mb-10 ">Instrumentos | Materiais</h2>
+                <p class=" indent-5 text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br>
+                    Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
+                </p>
+            </article>
+        </main>
+    </div>
 
-                if (menu.classList.contains('hidden')){
-                    menu.classList.remove('hidden')
-                    linhaTopo.classList.remove('justify-center')
-                    linhaTopo.classList.add('justify-between')
-                    titulo.classList.add('hidden')
-                } else  {
-                    menu.classList.add('hidden')
-                    linhaTopo.classList.add('justify-center')
-                    linhaTopo.classList.remove('justify-between')
-                    titulo.classList.remove('hidden')
-                }
-                
-            }
-    </script>
+
+    <!--Workshops / Inscrições-->
+    <div id="workshops" class="flex flex-col items-center justify-center mt-5 bg-white w-screen h-screen">
+        <main class="w-1/2 flex items-center text-center">
+            <article>
+                <h2 class="text-3xl mb-10 ">Workshops e Inscrições</h2>
+                <p class=" indent-5 text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br>
+                    Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
+                </p>
+            </article>
+        </main>
+    </div>
+
+    <!--Fale conosco-->
+    <div id="fale-conosco">
+        <footer>
+
+        </footer>
+    </div>
 
 </body>
+<script src="index.js" defer></script>
 </html>
 <!-- 
-    Apresentação / Nosso objetivo
-
-    Quem somos 
+    Quem somos  / Nosso objetivo
 
     Projetos
 
@@ -122,36 +145,4 @@
     Ofertas / Inscrições (Compra do Workshop) / Calendário
 
     Fale Conosco
-
-
- <script>
-        function toggleMenu() {
-            const menu = document.querySelector('nav')
-            const linhaTopo = document.getElementById('linha-topo')
-            if (menu.style.display == 'none') {
-                menu.style.display = 'flex'
-                linhaTopo.style.justifyContent = 'center'
-            } else {
-                menu.style.display = 'none'
-            }
-        }
-    </script>
-
-<div id="linha-topo" class="w-1/2 h-full flex border-2 border-white justify-between items-center">
-            <header class="text-white flex flex-row gap-2">
-                <h1 class="text-md">Gamelodic  </h1>
-                <button onclick="toggleMenu()"><figure><img src="fundo2.jpg" alt="" class="size-6"></figure></button>
-            </header>
-
-            <nav>
-                <ul class="text-white flex flex-row gap-2">
-                    <li>Home</li>
-                    <li>Quem somos</li>
-                    <li>Projetos</li>
-                    <li>Instrumentos/Materiais</li>
-                    <li>Fale conosco</li>
-                </ul>
-            </nav>
-        </div>
-
-    -->
+-->
