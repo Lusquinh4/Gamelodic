@@ -1,6 +1,6 @@
 // Função do topo
 
-const toggleButton = document.getElementById('toggleButton');
+/*const toggleButton = document.getElementById('toggleButton');
 toggleButton.addEventListener('click', toggleMenu);
         
 function toggleMenu() {
@@ -17,8 +17,8 @@ const titulo = document.getElementById('titulo')
     }
                 
     }
+*/
 
-function animarEntradas() {
 //Faz com que as animações executem quando aparece a seção na tela
 //cria o observador
     const observadorEntradaDireita = new IntersectionObserver((entradas) => {
@@ -51,4 +51,5 @@ function animarEntradas() {
         FadeIn.forEach((elemento) => {
             observadorFadeIn.observe(elemento);
         });
-    }
+
+
