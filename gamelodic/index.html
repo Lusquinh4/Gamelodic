@@ -9,6 +9,35 @@
 
     <style>
         /* Cria  a animação */
+        @keyframes instrumentos {
+            0% {
+                opacity: 0;
+                transform:translateY(100)
+            }
+            25% {
+                opacity: 0.5;
+                transform: translateY(50)
+            }
+
+            50% {
+                opacity: 0.75;
+                transform: translateY(25)
+            }
+
+            75% {
+                opacity: 0.9;
+                transform: translateY(10)
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .animate-instrumentos {
+            animation: instrumentos 1s ease-in-out;
+        }
 
         @keyframes entrada-direita {
             0% {
@@ -48,20 +77,19 @@
 
     </style>
 </head>
-<body class="bg-linear-65 from-blue-500 to-violet-500">
+<body class="bg-linear-65 from-blue-500 to-violet-500 m-0 p-0">
 
 <!--Titulo e navegação-->
     <div class="bg-black w-screen h-[70px] flex items-center justify-center sticky top-0"> 
-        <div class="w-4/5 lg:w-2/5 flex justify-between sm:gap-2 items-center">
+        <div class=" w-[85%] lg:w-2/5 flex justify-between items-center">
         <div class="flex flex-row items-center">        
-            <img src="titulo.png" alt="" class="lg:w-[300px] w-[100px]">
-            <img src="logo-gamelodic.png" alt="" class="size-7">
+        <img src="titulo.png" alt="" class="lg:w-[300px] w-[100px] sm:w-[200px]">
+            <img src="logo-gamelodic.png" alt="" class="size-7 sm:hidden">
         </div>
 
             <div>
                 <nav class="" id="nav">
-                    <ul class="text-white flex flex-row gap-5 font-serif font-bold" >
-                        <li class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30"><a href="#home">Home</a></li>
+                    <ul class="text-white flex flex-row gap-5 font-serif font-bold sm:text-sm text-nowrap sm:gap-1" >
                         <li class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30"><a href="#home">Quem somos</a></li>
                         <li class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30"><a href="#projetos">Projetos</a></li>
                         <li class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30"><a href="#instrumentos">Instrumentos/Materiais</a></li>
@@ -103,44 +131,38 @@
 
 
     <!--Instrumentos / Materiais-->
-    <div id="instrumentos" class="flex  items-center justify-center mt-5 bg- text-white w-screen h-screen">
-            <article class="w-screen h-screen flex items-center justify-center flex-col">
+    <div id="instrumentos" class="flex  items-center justify-center mt-5 text-white w-screen h-screen">
+        <article class="w-screen h-screen flex items-center justify-center flex-col">
   
                 <img src="https://fontmeme.com/permalink/250404/fab38c6e02ad8321bbaf1e79406ceea3.png" alt="" class="mb-20">
 
             <article class="flex justify-around justify-self-center w-screen">
                     
                     <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
-                        <h1 class="text-2xl font-serif text-black">Violão</h1>
-                        <img src="violao.png" alt="">
-                        <p id="violao" class="text-justify">
-                            O Violão GaMelodic é ideal para quem quer aprender a criar músicas para trilhas sonoras de jogos. Projetado para iniciantes e alunos intermediários, nosso curso ensina como usar o violão para criar atmosferas sonoras que envolvem e emocionam os jogadores.<br>
-                            Nos workshops, os iniciantes começam com os fundamentos, como ritmo, acordes e progressões harmônicas, tocando suas primeiras melodias e músicas. Para os intermediários, o foco se expande para técnicas avançadas, como improvisação, arranjos harmônicos e a composição de trilhas sonoras interativas que se adaptam ao ritmo do jogo.<br>
-                            A metodologia de ensino é prática, com exercícios e projetos que desafiam os alunos a aplicar o violão em diferentes cenários de jogos, desde momentos de ação até passagens mais suaves e emocionais. O Violão GaMelodic é o instrumento perfeito para quem deseja explorar a música no contexto dos games, seja no nível básico ou avançado.
+                        <h1 class="text-2xl font-serif font-bold text-black">Violão</h1>
+                        <img src="violao.png" alt="" class="size-[150px] instrumentos">
+                        <p id="violao" class="text-justify indent-5">
+                            O Violão GaMelodic é ideal para quem deseja criar músicas para trilhas sonoras de jogos. O curso, voltado para iniciantes e intermediários, ensina a usar o violão para criar atmosferas sonoras envolventes. Iniciantes aprendem fundamentos como ritmo e acordes, enquanto intermediários se aprofundam em técnicas avançadas, como improvisação e arranjos harmônicos. A metodologia prática inclui exercícios e projetos que desafiam os alunos a aplicar o violão em diferentes cenários de jogos, desde momentos de ação até passagens emocionais.
                         </p>
                     </div>
 
                     <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
-                        <h1 class="text-2xl ">Saxofone</h1>
-                        <img src="sax.png" alt="" class="">
-                        <p>
-                            O Saxofone Alto GaMelodic é o instrumento ideal para criar trilhas sonoras impactantes e emocionantes no universo dos jogos. Seu som expressivo é perfeito para compor desde momentos intensos de ação até passagens mais suaves e reflexivas.<br>
-                            Nos workshops da GaMelodic, oferecemos um ensino prático e focado, tanto para iniciantes quanto para alunos intermediários. Para iniciantes, começamos com os fundamentos essenciais, como embocadura, postura, leitura de partituras e execução de escalas. À medida que os alunos avançam, exploramos técnicas mais complexas, como improvisação, dinâmica expressiva e a adaptação do saxofone para criar trilhas sonoras interativas que respondem à narrativa do jogo.<br>
-                            A metodologia é totalmente aplicada, com exercícios práticos que desafiam os alunos a compor e tocar músicas para diferentes cenários de jogos, ajudando-os a dominar o saxofone alto como uma ferramenta poderosa para a criação de atmosferas sonoras únicas e emocionantes no mundo dos games.
+                        <h1 class="text-2xl font-serif font-bold text-black">Saxofone</h1>
+                        <img src="sax.png" alt="" class="size-[150px]">
+                        <p class="indent-5">
+                            O Saxofone Alto GaMelodic é perfeito para criar trilhas sonoras impactantes em jogos, com um som expressivo ideal para momentos intensos e passagens emocionais. O curso oferece ensino prático para iniciantes e intermediários. Iniciantes aprendem embocadura, postura e leitura de partituras, enquanto os intermediários exploram técnicas avançadas como improvisação e adaptação do saxofone para trilhas sonoras interativas. A metodologia aplicada inclui exercícios que desafiam os alunos a compor músicas para diferentes cenários de jogos, utilizando o saxofone alto para criar atmosferas sonoras únicas e emocionantes.
                         </p>
                     </div>
 
                     <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
-                        <h1 class="text-2xl">Guitarra</h1>
-                        <img src="guitarra.png" alt="">
-                        <p class="">
-                            A Guitarra GaMelodic é perfeita para explorar as diversas possibilidades sonoras da guitarra em trilhas sonoras de jogos. Seu som versátil é ideal para criar desde riffs energéticos até melodias emocionantes.<br>
-                            Nos workshops da GaMelodic, oferecemos ensino prático para iniciantes e intermediários. Para iniciantes, começamos com acordes, escalas e ritmos, focando em composições simples e impactantes. Para alunos intermediários, aprofundamos em técnicas como solos, improvisação e arranjos mais complexos, ensinando como usar a guitarra para criar trilhas dinâmicas que se adaptam à ação do jogo.<br>
-                            A metodologia é focada em prática, com exercícios que desafiam os alunos a compor músicas para diferentes cenários de jogos, tornando a guitarra uma ferramenta criativa e imersiva para trilhas sonoras.<br>
+                        <h1 class="text-2xl font-serif font-bold text-black">Guitarra</h1>
+                        <img src="guitarra.png" alt="" class="size-[150px]">
+                        <p class="indent-5">
+                            A Guitarra GaMelodic é ideal para explorar as possibilidades sonoras em trilhas de jogos, com um som versátil que vai de riffs energéticos a melodias emocionantes. Nos workshops da GaMelodic, iniciantes aprendem acordes, escalas e ritmos para composições simples, enquanto alunos intermediários se aprofundam em solos, improvisação e arranjos complexos. A metodologia prática incentiva a criação de músicas para diferentes cenários de jogos, tornando a guitarra uma ferramenta criativa e imersiva.
                         </p>
                     </div>
                 </div>
-
+            </article>
         </article>
     </div>
 
@@ -159,9 +181,9 @@
     </div>
 
     <!--Fale conosco-->
-    <div id="fale-conosco">
+    <div id="fale-conosco" class="mt-5 bg-white w-screen h-[400px] flex justify-center">
         <footer>
-
+            <h1>Fale Conosco</h1>
         </footer>
     </div>
 
