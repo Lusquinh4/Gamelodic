@@ -71,6 +71,22 @@ imagens.forEach((imagem) => {
     });
 });
 
+// Animação instrumentos
+        const observadorInstrumentos = new instersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting) {
+            entry.target.classList.add('animate-instrumentos')
+        } else {
+            entry.target.classList.remove('animate-instrumentos')
+                }
+            });
+        });
+
+        const instrumentos = document.querySelectorAll('.instrumentos')
+        instrumentos.forEach((elemento) => {
+            observadorInstrumentos.observe(elemento);
+        });
+
 
 
 
