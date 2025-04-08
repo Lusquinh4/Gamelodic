@@ -63,10 +63,10 @@
 
     <!--Titulo e navegação-->
     <div class="bg-white/10 backdrop-blur-lg w-screen h-[70px] flex items-center justify-center sticky top-0 z-10">
-        <div class="w-4/5 lg:w-2/5 flex justify-between sm:gap-2 items-center">
+        <div class="w-[80%]  flex justify-around sm:gap-2 items-center">
             <div class="flex flex-row items-center">
                 <img src="titulo.png" alt="" class="lg:w-[300px] w-[100px]">
-                <img src="logo-gamelodic.png" alt="" class="size-7">
+                <img src="logo.jpeg" alt="" class="size-5 lg:size-7">
             </div>
 
             <div>
@@ -100,7 +100,7 @@
     <!--Apresentação-->
     <div id="home" class="flex items-center justify-center  w-screen">
         <div
-            class="flex flex-row items-center justify-around h-[400px] w-screen bg-[url(fundo-blocos.png)] object-cover bg-center">
+            class="flex flex-row items-center justify-around h-[400px] w-screen bg-[url(fundo-blocos.jpg)] object-cover bg-center">
             <img src="violino.png" alt="" class="size-20 flex self-center obj-home">
             <article id="home-anim"
                 class="flex flex-col w-1/2 items-center text-center justify-center font-serif z-0 text-white bg-laranja-paleta/20 backdrop-blur-lg rounded-lg p-5">
@@ -133,7 +133,7 @@
 
                 <div id="violao" class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="text-2xl font-serif text-white mb-2">Violão</h1>
-                    <div class="rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5"
+                    <div class="overflow-hidden md:size-50 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5"
                         id="violao-img">
                         <img id="" src="violao.png" alt="" onmouseover="violao()" onmouseout="violaoOut()"
                             class="ease-in-out" data-txt=" O Violão GaMelodic é ideal para quem quer aprender a criar músicas para trilhas sonoras de
@@ -153,7 +153,7 @@
                 <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="text-2xl mb-2 font-serif">Saxofone</h1>
                     <div id="sax"
-                        class="rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
+                        class="overflow-hidden p-1 md:size-50 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
                         <img src="sax.png" alt="" onmouseover="sax()" onmouseout="saxOut()" data-txt="O Saxofone Alto GaMelodic é o instrumento ideal para criar trilhas sonoras impactantes e
                         emocionantes no universo dos jogos. Seu som expressivo é perfeito para compor desde momentos
                         intensos de ação até passagens mais suaves e reflexivas.
@@ -173,7 +173,7 @@
                 <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="text-2xl mb-2 font-serif">Guitarra</h1>
                     <div id="guitarra"
-                        class="rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
+                        class="md:size-50 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
                         <img src="guitarra.png" alt="" onmouseover="guitarra()" onmouseout="guitarraOut()" data-txt="A Guitarra GaMelodic é perfeita para explorar as diversas possibilidades sonoras da guitarra em
                         trilhas sonoras de jogos. Seu som versátil é ideal para criar desde riffs energéticos até
                         melodias emocionantes.
@@ -191,7 +191,7 @@
                 <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="text-2xl mb-2 font-serif">Violino</h1>
                     <div id="violino"
-                        class="rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
+                        class="md:size-50 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
                         <img src="violino.png" alt="" onmouseover="violino()" onmouseout="violinoOut()" data-txt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
                         cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
                         Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget
@@ -259,11 +259,12 @@
     </div>
 
     <!--Fale conosco-->
-    <div id="fale-conosco" class="bg-yellow-300 text-black">
-        <footer class="flex flex-row justify-around">
-            <div class="flex flex-row">
-                <p>Acompanhe nossas redes: </p>
-                <a class="hover:bg-black/20" href="https://www.instagram.com/gamelodic"><svg width="22px" height="22px"
+    <div id="fale-conosco" class=" text-black">
+        <footer
+            class="flex flex-row items-center justify-around w-screen h-[100px] bg-gradient-to-r from-yellow-300 to-orange-500">
+            <div class="flex flex-row gap-2">
+                <p class="font-bold">Acompanhe nossas redes: </p>
+                <a class="" href="https://www.instagram.com/gamelodic"><svg width="22px" height="22px"
                         viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M3 11C3 7.22876 3 5.34315 4.17157 4.17157C5.34315 3 7.22876 3 11 3H13C16.7712 3 18.6569 3 19.8284 4.17157C21 5.34315 21 7.22876 21 11V13C21 16.7712 21 18.6569 19.8284 19.8284C18.6569 21 16.7712 21 13 21H11C7.22876 21 5.34315 21 4.17157 19.8284C3 18.6569 3 16.7712 3 13V11Z"
@@ -276,15 +277,17 @@
                     </svg>
                 </a>
             </div>
-            <div class="flex flex-row">
-                <p>Contatos: contatogamelodic@gmail.com
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                </svg>
-
+            <div>
+                <p class="font-bold">Contatos: </p>
+                <a href="mailto:contatogamelodic@gmail.com">
+                    <p class="flex flex-row">contatogamelodic@gmail.com
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                        </svg>
+                    </p>
+                </a>
             </div>
         </footer>
     </div>
@@ -303,30 +306,4 @@
     Ofertas / Inscrições (Compra do Workshop) / Calendário
 
     Fale Conosco
--->       </path>
-                    </svg>
-                </a>
-            </div>
-            <div class="flex flex-row">
-                <p>Contatos: contatogamelodic@gmail.com
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                </svg>
-
-            </div>
-        </footer>
-    </div>
-
-</body>
-<script src="index.js" defer></script>
-
-</html>
-<!-- 
-    Quem somos  / Nosso objetivo
-
-    Projetos
-
-   
+-->
