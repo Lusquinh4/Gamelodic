@@ -59,19 +59,19 @@
     </style>
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white overflow-x-hidden">
 
     <!--Titulo e navegação-->
-    <div class="bg-white/10 backdrop-blur-lg w-screen h-[70px] flex items-center justify-center sticky top-0 z-10">
-        <div class="w-[80%]  flex justify-around sm:gap-2 items-center">
+    <div class="bg-white/10 backdrop-blur-lg w-screen md:h-[70px] flex items-center justify-center sticky top-0 z-10 h-[35px]">
+        <div class="w-[80%]  flex justify-around items-center">
             <div class="flex flex-row items-center">
-                <img src="titulo.png" alt="" class="lg:w-[300px] w-[100px]">
+                <img src="titulo.png" alt="" class="lg:w-[300px] w-[90px] md:w-[100px]">
                 <img src="logo.jpeg" alt="" class="size-5 lg:size-7">
             </div>
 
             <div>
                 <nav class="" id="nav">
-                    <ul class="text-black flex flex-row gap-5 font-serif font-bold text-white">
+                    <ul class="flex flex-row md:gap-5 font-serif font-bold text-sm md:text-md text-white">
                         <li
                             class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
                             <a href="#home">Home</a>
@@ -98,14 +98,14 @@
     <!-- Conteúdo -->
 
     <!--Apresentação-->
-    <div id="home" class="flex items-center justify-center  w-screen">
+    <div id="home" class="flex items-center justify-center  w-screen m-0 p-0">
         <div
             class="flex flex-row items-center justify-around md:h-[600px] h-[400px] w-screen bg-[url(fundo-blocos.jpg)] object-cover bg-center">
             <img src="violino.png" alt="" class="size-20 flex self-center obj-home">
             <article id="home-anim"
-                class="flex flex-col w-1/2 items-center text-center justify-center font-serif z-0 text-white bg-laranja-paleta/20 backdrop-blur-lg rounded-lg p-5">
-                <h2 class="text-[60px] mb-10 text-3xl font-bold">Quem somos</h2>
-                <p class="indent-5 text-justify">
+                class="flex flex-col w-[70%] h-[90%] md:w-1/2 items-center text-center justify-center font-serif z-0 text-white backdrop-blur-lg rounded-lg p-5 bg-repeat">
+                <h2 class="md:text-[60px] mb-5 md:mb-10 text-[15px] md:text-3xl font-bold">Quem somos</h2>
+                <p class="indent-5 text-justify text-[10px] md:text-md">
                     A Gamelodic oferece workshops online práticos para desenvolver habilidades musicais do nível
                     iniciante ao intermediário, com foco na criação de trilhas sonoras para jogos. Nosso objetivo é
                     capacitar os alunos a compor músicas que melhorem a experiência dos jogadores, aplicando técnicas e
@@ -123,7 +123,7 @@
 
     <!--Instrumentos / Materiais-->
     <div id="instrumentos"
-        class="flex  items-center justify-center bg- text-white w-screen h-screen">
+        class="flex  items-center justify-center text-white w-screen h-screen">
         <article class="w-screen h-screen flex items-center justify-center flex-col">
 
             <img src="instrumentos.png" alt="" class="mb-20">
