@@ -74,7 +74,7 @@
         <div class="w-[80%]  flex justify-around items-center">
             <div class="flex flex-row items-center">
                 <img src="titulo.png" alt="" class="lg:w-[300px] w-[90px] md:w-[100px]">
-                <img src="logo.jpeg" alt="" class="size-5 lg:size-7">
+                <img src="logo.jpeg" alt="" class="size-5 lg:size-7 hidden md:block">
             </div>
 
             <div>
@@ -85,7 +85,7 @@
                             Home
                         </li></a>
                         <a href="#instrumentos"><li
-                            class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                            class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
                             Instrumentos/Materiais
                         </li></a>
                         <a href="#projetos"><li
@@ -93,7 +93,7 @@
                             Projetos
                         </li></a>
                         <a href="#fale-conosco"><li
-                            class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                            class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
                             Fale conosco
                         </li></a>
                     </ul>
@@ -131,17 +131,17 @@
 
     <!--Instrumentos / Materiais-->
     <div id="instrumentos"
-        class="flex  items-center justify-center text-white w-screen h-screen">
+        class="flex  items-center justify-center text-white w-screen h-screen overflow-hidden">
         <article class="w-screen h-screen flex items-center justify-center flex-col">
 
-            <img src="instrumentos.png" alt="" class="mb-20">
+            <img src="instrumentos.png" alt="" class="mb-10 md:mb-20">
 
             <!-- Div dos instrumentos -->
             <article id="funcao-instrumentos" class="flex justify-around justify-self-center w-screen">
 
                 <div id="violao" class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="text-2xl font-serif text-white mb-2">Violão</h1>
-                    <div class="overflow-hidden md:size-50 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5"
+                    <div class="overflow-hidden md:size-50 size-35 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5"
                         id="violao-img">
                         <img id="" src="violao.png" alt="" onmouseover="violao()" onmouseout="violaoOut()"
                             class="ease-in-out" data-txt=" O Violão GaMelodic é ideal para quem quer aprender a criar músicas para trilhas sonoras de
