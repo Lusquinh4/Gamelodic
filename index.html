@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth" style="scroll-behavior: smooth;">
 
 <head>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -9,6 +9,20 @@
 
 
     <style>
+
+        @layer utilities {
+            .scroll-smooth {
+                scroll-behavior: smooth;
+            }
+            
+            .scroll-slower {
+                --scroll-time: 1500ms;
+                transition: scroll-behavior var(--scroll-time) cubic-bezier(0.4, 0, 0.2, 1);
+                scroll-behavior: smooth;
+            }
+        }
+    
+
         /* Cria  a animação */
 
         @keyframes entrada-direita {
@@ -50,16 +64,10 @@
         .animate-entrada-fade-in {
             animation: entrada-fade-in 1s ease-in-out;
         }
-
-        @import "tailwindcss";
-
-        @theme {
-            --laranja-paleta: #f69707;
-        }
     </style>
 </head>
 
-<body class="bg-black text-white overflow-x-hidden">
+<body class="bg-black text-white overflow-x-hidden scroll-smooth">
 
     <!--Titulo e navegação-->
     <div class="bg-white/10 backdrop-blur-lg w-screen md:h-[70px] flex items-center justify-center sticky top-0 z-10 h-[35px]">
@@ -71,23 +79,23 @@
 
             <div>
                 <nav class="" id="nav">
-                    <ul class="flex flex-row md:gap-5 font-serif font-bold text-sm md:text-md text-white">
-                        <li
-                            class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                            <a href="#home">Home</a>
-                        </li>
-                        <li
-                            class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                            <a href="#instrumentos">Instrumentos/Materiais</a>
-                        </li>
-                        <li
-                            class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                            <a href="#projetos">Projetos</a>
-                        </li>
-                        <li
-                            class="flex items-center rounded-lg p-1 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                            <a href="#fale-conosco">Fale conosco</a>
-                        </li>
+                    <ul class="flex flex-row md:gap-5 font-serif font-bold text-[7px] md:text-md text-white">
+                        <a href="#home"><li
+                            class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                            Home
+                        </li></a>
+                        <a href="#instrumentos"><li
+                            class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                            Instrumentos/Materiais
+                        </li></a>
+                        <a href="#projetos"><li
+                            class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                            Projetos
+                        </li></a>
+                        <a href="#fale-conosco"><li
+                            class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                            Fale conosco
+                        </li></a>
                     </ul>
                 </nav>
             </div>
@@ -103,9 +111,9 @@
             class="flex flex-row items-center justify-around md:h-[600px] h-[400px] w-screen bg-[url(fundo-blocos.jpg)] object-cover bg-center">
             <img src="violino.png" alt="" class="size-20 flex self-center obj-home">
             <article id="home-anim"
-                class="flex flex-col w-[70%] h-[90%] md:w-1/2 items-center text-center justify-center font-serif z-0 text-white backdrop-blur-lg rounded-lg p-5 bg-repeat">
+                class="flex flex-col w-[70%] md:w-1/2 items-center text-center justify-center font-serif z-0 text-white backdrop-blur-lg rounded-lg p-5 bg-repeat">
                 <h2 class="md:text-[60px] mb-5 md:mb-10 text-[15px] md:text-3xl font-bold">Quem somos</h2>
-                <p class="indent-5 text-justify text-[10px] md:text-md">
+                <p class="indent-5 text-justify text-[10px] md:text-lg md:p-1">
                     A Gamelodic oferece workshops online práticos para desenvolver habilidades musicais do nível
                     iniciante ao intermediário, com foco na criação de trilhas sonoras para jogos. Nosso objetivo é
                     capacitar os alunos a compor músicas que melhorem a experiência dos jogadores, aplicando técnicas e
