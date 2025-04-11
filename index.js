@@ -74,14 +74,16 @@ FadeIn.forEach((elemento) => {
 
 
 
-// Teste
+// Texto dos instrumentos | Adiciona fundo ao texto vindo do atributo "fundo" das imagens
 const imagens = document.querySelectorAll('img[data-txt]'); // Seleciona imagens com o atributo data-txt
 const espaco = document.getElementById('caixa');
 imagens.forEach((imagem) => {
     imagem.addEventListener('mouseover', () => {
         const texto = imagem.getAttribute('data-txt'); // Obtém o texto do atributo data-txt
         espaco.textContent = texto; // Define o texto no elemento 'caixa'
-        espaco.classList.remove('hidden'); // Torna o elemento visível
+        espaco.classList.remove('hidden', 'overflow-hidden'); // Torna o elemento visível
+        espaco.style.backgroundImage = 'url(' + imagem.getAttribute('fundo') + ')';
+        espaco.classList.add('bg-center', 'bg-no-repeat');
     });
 
     imagem.addEventListener('mouseout', () => {
@@ -106,98 +108,3 @@ imagens.forEach((imagem) => {
         });
 
 
-
-
-
-
-
-
-
-
-// //Função instrumentos
-// function violao() {
-//     const violaoImage = document.getElementById('violao-img');
-//     const violaoTxt = document.getElementById('violao-txt');
-//     const violaoFundo = document.getElementById('violao');
-//     if (violaoTxt.classList.contains('hidden')) {
-//         violaoTxt.classList.remove('hidden');
-//         violaoFundo.classList.add('bg-yellow-500');
-//         violaoFundo.classList.add('border-4');
-//         violaoFundo.classList.add('border-orange-500/40');
-//         violaoImage.classList.remove('rounded-full');
-//     }
-// }
-// function violaoOut(){
-//     const violaoFundo = document.getElementById('violao');
-//     const violaoImage = document.getElementById('violao-img');
-//     const violaoTxt = document.getElementById('violao-txt');
-//     if (!violaoTxt.classList.contains('hidden')) {
-//         violaoTxt.classList.add('hidden');
-//         violaoImage.classList.add('rounded-full');
-//         violaoImage.classList.add('border-none');
-//         violaoImage.classList.add('rounded-full');
-//         violaoFundo.classList.remove('bg-yellow-500');
-//         violaoFundo.classList.remove('border-4');
-//         violaoFundo.classList.remove('border-orange-500/40');
-
-//     }
-// }
-
-// function sax() {
-//     const saxTxt = document.getElementById('sax-txt');
-//     if (saxTxt.classList.contains('hidden')) {
-//         saxTxt.classList.remove('hidden');
-//     } else {
-//         saxTxt.classList.add('hidden');
-//     }
-// }
-// function saxOut(){
-//     const saxTxt = document.getElementById('sax-txt');
-//     if (!saxTxt.classList.contains('hidden')) {
-//         saxTxt.classList.add('hidden');
-//     }
-// }
-
-// function guitarra() {
-//     const guitarraTxt = document.getElementById('guitarra-txt');
-//     if (guitarraTxt.classList.contains('hidden')) {
-//         guitarraTxt.classList.remove('hidden');
-//     } else {
-//         guitarraTxt.classList.add('hidden');
-//     }
-// }
-// function guitarraOut(){
-//     const guitarraTxt = document.getElementById('guitarra-txt');
-//     if (!guitarraTxt.classList.contains('hidden')) {
-//         guitarraTxt.classList.add('hidden');
-//     }
-// }
-// function violino() {
-//     const violinoTxt = document.getElementById('violino-txt');
-//     if (violinoTxt.classList.contains('hidden')) {
-//         violinoTxt.classList.remove('hidden');
-//     } else {
-//         violinoTxt.classList.add('hidden');
-//     }
-// }
-// function violinoOut(){
-//     const violinoTxt = document.getElementById('violino-txt');
-//     if (!violinoTxt.classList.contains('hidden')) {
-//         violinoTxt.classList.add('hidden');
-//     }
-// }
-        saxTxt.classList.add('hidden');
-//     }
-// }
-
-// function guitarra() {
-//     const guitarraTxt = document.getElementById('guitarra-txt');
-//     if (guitarraTxt.classList.contains('hidden')) {
-//         guitarraTxt.classList.remove('hidden');
-//     } else {
-//         guitarraTxt.classList.add('hidden');
-//     }
-// }
-// function guitarraOut(){
-//     const guitarraTxt = document.getElementById('guitarra-txt');
-//   
