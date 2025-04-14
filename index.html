@@ -5,7 +5,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.jpeg" type="image/x-icon">
+    <link rel="icon" href="logo.png" type="image/x-icon">
     <title>Gamelodic</title>
 
 
@@ -15,14 +15,14 @@
             .scroll-smooth {
                 scroll-behavior: smooth;
             }
-            
+
             .scroll-slower {
                 --scroll-time: 1500ms;
                 transition: scroll-behavior var(--scroll-time) cubic-bezier(0.4, 0, 0.2, 1);
                 scroll-behavior: smooth;
             }
         }
-    
+
 
         /* Cria  a animação */
 
@@ -68,35 +68,45 @@
     </style>
 </head>
 
-<body class="bg-black text-white overflow-x-hidden scroll-smooth">
+<body class="bg-black text-white overflow-x-hidden scroll-smooth" style="cursor: url('cursor.png'), auto;">
 
     <!--Titulo e navegação-->
-    <div class="bg-white/10 backdrop-blur-lg w-screen md:h-[70px] flex items-center justify-center sticky top-0 z-10 h-[35px]">
+    <div
+        class="bg-white/10 backdrop-blur-lg w-screen md:h-[70px] flex items-center justify-center sticky top-0 z-10 h-[35px]">
         <div class="w-[80%]  flex justify-around items-center">
             <div class="flex flex-row items-center">
                 <img src="titulo.png" alt="" class="lg:w-[300px] w-[90px] md:w-[100px]">
-                <img src="logo.jpeg" alt="" class="size-5 lg:size-7 hidden md:block">
+                <img src="logo.png" alt="" class="size-5 lg:size-7 hidden md:block">
             </div>
 
             <div>
                 <nav class="" id="nav">
-                    <ul class="flex flex-row md:gap-5 font-serif font-bold text-[7px] md:text-[12px] lg:text-lg text-white">
-                        <a href="#home"><li
-                            class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                            Home
-                        </li></a>
-                        <a href="#instrumentos"><li
-                            class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                            Instrumentos/Materiais
-                        </li></a>
-                        <a href="#projetos"><li
-                            class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                            Projetos
-                        </li></a>
-                        <a href="#fale-conosco"><li
-                            class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
-                            Fale conosco
-                        </li></a>
+                    <ul
+                        class="flex flex-row md:gap-5 font-serif font-bold text-[7px] md:text-[12px] lg:text-lg text-white">
+                        <a href="#home">
+                            <li
+                                class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                                Home
+                            </li>
+                        </a>
+                        <a href="#instrumentos">
+                            <li
+                                class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                                Instrumentos/Materiais
+                            </li>
+                        </a>
+                        <a href="#projetos">
+                            <li
+                                class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                                Projetos
+                            </li>
+                        </a>
+                        <a href="#fale-conosco">
+                            <li
+                                class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                                Fale conosco
+                            </li>
+                        </a>
                     </ul>
                 </nav>
             </div>
@@ -131,8 +141,7 @@
 
 
     <!--Instrumentos / Materiais-->
-    <div id="instrumentos"
-        class="flex  items-center justify-center text-white w-screen h-screen overflow-hidden">
+    <div id="instrumentos" class="flex  items-center justify-center text-white w-screen h-screen overflow-hidden">
         <article class="w-screen h-screen flex items-center justify-center flex-col">
 
             <img src="instrumentos.png" alt="" class="mb-5 md:mb-20">
@@ -215,7 +224,8 @@
                 </div>
 
             </article>
-            <p id="caixa" class="flex items-center justify-center md:mt-10 opacity-0 indent-5 text-justify ease-in-out md:w-[50%] w-[70%] h-full text-[10px] md:text-[20px] font-serif">
+            <p id="caixa"
+                class="flex items-center justify-center md:mt-10 opacity-0 indent-5 text-justify ease-in-out md:w-[50%] w-[70%] h-full text-[10px] md:text-[20px] font-serif">
                 <span id="texto"></span>
 
             </p>
