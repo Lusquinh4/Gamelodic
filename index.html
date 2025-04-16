@@ -10,6 +10,65 @@
 
 
     <style>
+        /* Animação do fundo de "Quem somos" */
+        .fundo::after,
+        .fundo::before {
+            position: absolute;
+            content: " ";
+            top: -1;
+            left: -1;
+            width: calc(100% + 25px);
+            height: calc(100% + 25px);
+            background: linear-gradient(45deg,
+            #a3bcf4,
+            #b1ccf6,
+            #739ff1,
+            #5474b4,
+            #344c7c,
+            #5474b4,
+            #5474b4,
+            #739ff1,
+            #b1ccf6,
+            #a3bcf4
+                    );
+            border-radius: 10px;
+            z-index: -1;
+            background-size: 400%;
+            animation: animar-fundo 20s linear alternate infinite, opacidade 10s linear;
+            animation-delay: 20s, 0;
+        }
+
+        @keyframes opacidade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes animar-fundo {
+            0% {
+                background-position: 0;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }
+
+
+
+        /* animação dos botões de navegação */
+        .nav::after, .nav::before {
+            position: absolute;
+            content: " ";
+            top: 0;
+            width: 10px;
+            height: 2px;
+            background: linear-gradient(45deg, yellow, green);
+        }
+
 
         @layer utilities {
             .scroll-smooth {
@@ -85,25 +144,25 @@
                         class="flex flex-row md:gap-5 font-serif font-bold text-[7px] md:text-[12px] lg:text-lg text-white">
                         <a href="#home">
                             <li
-                                class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                                class="nav flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-blue-200/50 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
                                 Home
                             </li>
                         </a>
                         <a href="#instrumentos">
                             <li
-                                class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                                class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-blue-200/50 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
                                 Instrumentos/Materiais
                             </li>
                         </a>
                         <a href="#projetos">
                             <li
-                                class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                                class="flex items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-blue-200/50 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
                                 Projetos
                             </li>
                         </a>
                         <a href="#fale-conosco">
                             <li
-                                class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-yellow-300/40 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
+                                class="flex text-wrap md:text-nowrap items-center rounded-lg p-1 md:p-2 hover:bg-black/20 hover:shadow-lg hover:shadow-blue-200/50 hover:border-2 hover:border-yellow-300/40 hover:bg-yellow-300/30">
                                 Fale conosco
                             </li>
                         </a>
@@ -122,7 +181,7 @@
             class="flex flex-row items-center justify-around md:h-[600px] h-[400px] w-screen bg-[url(fundo-blocos.jpg)] object-cover bg-center">
             <img src="violino.png" alt="" class="size-20 flex self-center obj-home">
             <article id="home-anim"
-                class="flex flex-col w-[70%] md:w-1/2 items-center text-center justify-center font-serif z-0 text-white backdrop-blur-lg rounded-lg p-5 bg-repeat">
+                class="fundo flex flex-col w-[70%] md:w-1/2 items-center text-center justify-center font-serif z-0 text-black backdrop-blur-lg rounded-lg p-5 bg-repeat">
                 <h2 class="md:text-[60px] mb-5 md:mb-10 text-[15px] md:text-3xl font-bold">Quem somos</h2>
                 <p class="indent-5 text-justify text-[10px] md:text-lg md:p-1">
                     A Gamelodic oferece workshops online práticos para desenvolver habilidades musicais do nível
@@ -151,7 +210,7 @@
 
                 <div id="violao" class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="md:text-2xl text-md font-serif text-white mb-2">Violão</h1>
-                    <div class="overflow-hidden md:size-50 size-20 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5"
+                    <div class="overflow-hidden md:size-50 size-20 rounded-full border bg-white/30 hover:bg-slate-500 hover:border-blue-300/80 hover:border-2 mb-5"
                         id="violao-img">
                         <img id="" src="violao.png" fundo="fundoViolao.png" onmouseover="" onmouseout=""
                             class="ease-in-out" data-txt=" O Violão GaMelodic é ideal para quem quer aprender a criar músicas para trilhas sonoras de
@@ -171,7 +230,7 @@
                 <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="md:text-2xl text-md mb-2 font-serif">Saxofone</h1>
                     <div id="sax"
-                        class="overflow-hidden p-1 md:size-50 size-20 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
+                        class="overflow-hidden p-1 md:size-50 size-20 rounded-full border bg-white/30 hover:bg-slate-500 hover:border-blue-300/80 hover:border-2 mb-5">
                         <img src="sax.png" fundo="fundoSax.png" onmouseover="" onmouseout="" data-txt="O Saxofone Alto GaMelodic é o instrumento ideal para criar trilhas sonoras impactantes e
                         emocionantes no universo dos jogos. Seu som expressivo é perfeito para compor desde momentos
                         intensos de ação até passagens mais suaves e reflexivas.
@@ -191,7 +250,7 @@
                 <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="md:text-2xl text-md mb-2 font-serif">Guitarra</h1>
                     <div id="guitarra"
-                        class="md:size-50 size-20 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
+                        class="overflow-hidden md:size-50 size-20 rounded-full border bg-white/30 hover:bg-slate-500 hover:border-blue-300/80 hover:border-2 mb-5">
                         <img src="guitarra.png" fundo="fundoGuitarra.png" onmouseover="" onmouseout="" data-txt="A Guitarra GaMelodic é perfeita para explorar as diversas possibilidades sonoras da guitarra em
                         trilhas sonoras de jogos. Seu som versátil é ideal para criar desde riffs energéticos até
                         melodias emocionantes.
@@ -209,7 +268,7 @@
                 <div class="w-[400px] flex items-center justify-center flex-col p-[2px]">
                     <h1 class="md:text-2xl text-md mb-2 font-serif">Violino</h1>
                     <div id="violino"
-                        class="md:size-50 size-20 rounded-full border bg-white/30 hover:bg-yellow-500 hover:border-orange-500/40 hover:border-2 mb-5">
+                        class="overflow-hidden md:size-50 size-20 rounded-full border bg-white/30 hover:bg-slate-500 hover:border-blue-300/80 hover:border-2 mb-5">
                         <img src="violino.png" fundo="fundoViolino.png" onmouseover="" onmouseout="" data-txt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
                         cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
                         Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget
@@ -236,22 +295,22 @@
 
 
     <!--Projetos-->
-    <div id="projetos" class="flex flex-col items-center justify-center bg-laranja-paleta w-screen h-screen">
-        <main id="projetos-anim" class="w-1/2 flex items-center text-center">
-            <article>
+    <div id="projetos" class="flex flex-col items-center justify-center w-screen h-screen">
+        <main id="projetos-anim" class="w-1/2 flex items-center text-center ">
+            <article class="w-[80%] p-3 fundo relative bg-black flex items-center justify-center flex-col">
                 <h2 class="text-3xl mb-10">Projetos</h2>
                 <p class="indent-5 text-justify text-[10px] md:text-[20px]">
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                    Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget
-                    nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                    himenaeos.<br>
-                    Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
-                    Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut
-                    ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non,
-                    massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper
-                    vel, tincidunt sed, euismod in, nibh.
+                    Este projeto nasceu com a ideia de tornar o aprendizado musical mais acessível, prático e prazeroso.
+                    Aqui, oferecemos aulas gratuitas que vão do nível iniciante até o intermediário, voltadas para quem
+                    quer aprender a tocar um instrumento, mesmo que nunca tenha tido contato com a música antes.
+                    Embora o foco principal seja ensinar através de trilhas sonoras de jogos — algo que aproxima muitos
+                    alunos e torna o processo mais divertido — também deixamos espaço para outros estilos e preferências
+                    musicais. O mais importante é que cada pessoa possa aprender no seu ritmo, com repertórios que façam
+                    sentido para ela.
+                    As aulas incluem instrumentos como guitarra, violão, violino e saxofone, sempre com uma abordagem
+                    acessível, direta e pensada para quem quer aprender de forma leve, sem pressão.
+                    Este é um dos nossos jeitos de incentivar a criatividade, a escuta e a expressão musical, conectando
+                    pessoas através da música — seja ela vinda dos games ou de outros lugares.
                 </p>
             </article>
         </main>
@@ -259,7 +318,7 @@
 
     <!--Workshops / Inscrições-->
     <div id="workshops" class="flex flex-col items-center justify-center mt-5 bg-laranja-paleta w-screen h-screen">
-        <main class="w-1/2 flex items-center text-center">
+        <main class="w-1/2 flex items-center text-center linha-fundo">
             <article>
                 <h2 class="md:text-3xl text-lg mb-10 ">Workshops e Inscrições</h2>
                 <p class=" indent-5 text-justify text-[10px] md:text-[20px]">

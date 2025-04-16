@@ -99,3 +99,5 @@ const observadorInstrumentos = new instersectionObserver((entries) => {
     }
   });
 });
+
+
